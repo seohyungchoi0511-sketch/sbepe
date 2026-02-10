@@ -8,6 +8,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +28,17 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-24">
           {/* Brand */}
-          <button onClick={() => handleNav('home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity text-left">
-            <img src="/images/logo/logo.png" alt="(주)서울건축환경기술사사무소" className="h-12 w-auto object-contain" />
+          <button
+            onClick={() => handleNav('home')}
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity text-left"
+            onMouseEnter={() => setIsLogoHovered(true)}
+            onMouseLeave={() => setIsLogoHovered(false)}
+          >
+            <img
+              src={isLogoHovered ? "/images/logo/logo korean.png" : "/images/logo/logo.png"}
+              alt="(주)서울건축환경기술사사무소"
+              className="h-12 w-auto object-contain transition-all duration-300"
+            />
           </button>
 
           {/* Desktop Nav */}

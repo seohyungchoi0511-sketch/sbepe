@@ -14,11 +14,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="mb-12 text-center">
             <button
               onClick={() => onNavigate('home')}
-              className="group flex flex-col items-center gap-4 outline-none"
+              className="group flex flex-col items-center gap-4 outline-none hover:opacity-80 transition-opacity"
             >
-              {/* 로고 아이콘을 라운드 사각형으로 변경 */}
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-teal-400 shadow-xl shadow-blue-500/20 transform group-hover:scale-110 transition-transform duration-500" />
-              <h2 className="text-2xl font-black text-slate-900 tracking-tighter">(주)서울건축환경기술사사무소</h2>
+              <img
+                src="/images/logo/logo.png"
+                alt="(주)서울건축환경기술사사무소"
+                className="h-24 w-auto object-contain"
+              />
             </button>
           </div>
 
