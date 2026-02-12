@@ -61,22 +61,17 @@ const Services: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header - Engineering Layout */}
-        <div className="flex flex-col lg:flex-row items-end justify-between gap-12 mb-24 border-l-4 border-blue-600 pl-8">
+        <div className="flex flex-col lg:flex-row items-end justify-between gap-12 mb-24 border-l-4 border-[#002aba]600 pl-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-blue-600 font-black text-[10px] uppercase tracking-[0.4em]">Operational Framework</span>
-              <div className="h-px flex-grow bg-blue-100" />
+              <span className="text-[#002aba]600 font-black text-[10px] uppercase tracking-[0.4em]">Operational Framework</span>
+              <div className="h-px flex-grow bg-[#002aba]100" />
             </div>
             {/* 타이틀 크기 축소: 5xl/7xl -> 4xl/6xl */}
             <h3 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-[0.9] mb-8">
               PRECISION<br />
-              <span className="text-blue-600">FORENSICS</span>
+              <span className="text-[#002aba]600">FORENSICS</span>
             </h3>
-            {/* 설명 문구 크기 축소: lg/xl -> base/lg */}
-            <p className="text-slate-500 font-bold text-base md:text-lg leading-relaxed break-keep">
-              모호한 주장이 아닌, 공학적 준거와 실증 데이터를 통해<br />
-              건설 분쟁의 핵심을 관통하는 6가지 분석 모듈입니다.
-            </p>
           </div>
           <div className="hidden lg:block text-right">
             <div className="text-[120px] font-black text-slate-100 leading-none select-none">06</div>
@@ -85,25 +80,26 @@ const Services: React.FC = () => {
         </div>
 
         {/* Blueprint Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 shadow-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
           {SERVICES.map((service, idx) => (
             <div
               key={idx}
-              className="group relative bg-white p-12 md:p-16 transition-all duration-500 hover:z-20 overflow-hidden"
+              className="group relative h-full rounded-xl border border-slate-200 bg-white/70 backdrop-blur p-8 md:p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#002aba]/30 hover:bg-[#002aba]/[0.04]"
             >
               {/* Module Header 제거 (MOD 넘버 및 Active 표시 제거) */}
               <div className="mb-8" />
 
               {/* Module Title */}
               <div className="relative mb-8">
-                <h4 className="text-2xl font-black text-slate-900 leading-tight tracking-tight break-keep group-hover:text-blue-600 transition-colors">
+                <h4 className="text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-[#002aba]">
                   {service.title}
                 </h4>
-                <div className="absolute -left-16 top-1/2 -translate-y-1/2 w-8 h-px bg-slate-100 group-hover:bg-blue-600 transition-all duration-500 group-hover:w-12" />
+                <div className="absolute -left-16 top-1/2 -translate-y-1/2 w-8 h-px bg-slate-100 group-hover:bg-[#002aba]600 transition-all duration-500 group-hover:w-12" />
               </div>
 
               {/* Module Content */}
-              <p className="text-slate-500 text-sm font-bold leading-relaxed mb-12 break-keep opacity-80 group-hover:opacity-100 transition-opacity min-h-[80px]">
+              <p className="mt-3 text-sm text-slate-600 leading-6 line-clamp-2">
                 {service.description}
               </p>
 
@@ -111,22 +107,22 @@ const Services: React.FC = () => {
               <div className="flex flex-wrap items-center gap-4 pt-8 border-t border-slate-50">
                 <div className="flex flex-wrap gap-2 flex-grow">
                   {service.tags.map((tag, i) => (
-                    <span key={i} className="text-[9px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-2 py-1 group-hover:text-blue-600 transition-colors">
+                    <span key={i} className="text-[9px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-2 py-1 group-hover:text-[#002aba]600 transition-colors">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <span className="text-[10px] font-mono font-bold text-slate-200 group-hover:text-blue-100 transition-colors">
+                <span className="text-[10px] font-mono font-bold text-slate-200 group-hover:text-[#002aba]100 transition-colors">
                   {service.meta}
                 </span>
               </div>
 
               {/* Hover Interaction: Technical Scan Line */}
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out" />
-              <div className="absolute bottom-0 left-0 w-1.5 h-0 bg-blue-600 group-hover:h-full transition-all duration-700 ease-in-out delay-100" />
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#002aba]600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out" />
+              <div className="absolute bottom-0 left-0 w-1.5 h-0 bg-[#002aba]600 group-hover:h-full transition-all duration-700 ease-in-out delay-100" />
 
               {/* Corner Accent */}
-              <div className="absolute top-0 right-0 w-12 h-12 border-r border-t border-slate-100 group-hover:border-blue-600 transition-colors pointer-events-none" />
+              <div className="absolute top-0 right-0 w-12 h-12 border-r border-t border-slate-100 group-hover:border-[#002aba]600 transition-colors pointer-events-none" />
             </div>
           ))}
         </div>

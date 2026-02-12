@@ -1,54 +1,66 @@
-
-import React from 'react';
+import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-white">
-      {/* Background Static Image */}
-      <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-slate-50"
-          style={{
-            backgroundImage: `url('/images/picts/seoul.jpg')`
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
-        <div className="absolute inset-0 bg-blue-50/20" />
-      </div>
+    <section className="relative w-full min-h-[100vh] flex items-center overflow-hidden">
+      {/* 배경 */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/picts/seoul.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-white/35" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
-        <div className="max-w-5xl">
-          {/* 상단 포인트 라벨 */}
-          <div className="mb-12 flex items-center gap-4">
-            <div className="w-12 h-1 bg-blue-600" />
-            <span className="text-blue-600 font-black text-[10px] md:text-xs uppercase tracking-[0.4em]">Corporate Philosophy</span>
-          </div>
+      {/* 컨텐츠 영역 */}
+      <div className="relative z-10 w-full">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-left">
+            {/* 왼쪽 절반 */}
+            <div className="text-left max-w-[900px]">
+              <div className="flex flex-col gap-3">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl tracking-[-0.02em] leading-[1.15] font-normal">
+                  사회적 가치를 추구하는 열린 세상
+                </h2>
 
-          <div className="flex flex-col gap-4">
-            {/* 문구 1: 사회적 가치를 추구하는 열린 세상 (느낌표 제거) */}
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.2] tracking-tighter">
-              사회적 가치를 추구하는 <span className="text-slate-900">열린 세상</span>
-            </h2>
+                <h2 className="text-2xl md:text-4xl lg:text-5xl tracking-tight leading-[1.10] font-normal">
+                  건설감정법인{" "}
+                  <span className="font-semibold text-[#002aba]">
+                    서울건축환경
+                  </span>
+                </h2>
+                <p className="mt-4 text-base md:text-lg text-slate-70 tracking-wide">
+                  법원감정 · 하자진단 · VE · 건설클레임
+                </p>
 
-            {/* 문구 2: 건설감정법인 서울건축환경 (동일 크기, 서울건축환경 강조 유지) */}
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-800 leading-[1.2] tracking-tighter">
-              건설감정법인 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">서울건축환경</span>
-            </h2>
-          </div>
 
-          {/* 하단 데코레이션 요소 */}
-          <div className="mt-20 flex flex-col gap-8">
-            <div className="flex gap-2">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className={`h-1.5 transition-all duration-1000 ${i === 0 ? 'w-20 bg-blue-600' : 'w-8 bg-slate-100'}`} />
-              ))}
+              </div>
             </div>
-            <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.5em]">
-              Excellence in Forensic Engineering since 2002
-            </p>
           </div>
         </div>
       </div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2
+                flex flex-col items-center gap-1
+                border border-white/70 rounded-full px-4 py-3
+                backdrop-blur-sm bg-white/10">
+
+        <svg className="w-4 h-4 text-[#002aba] animate-[bounce_2s_infinite_0s] opacity-80"
+          fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+
+        <svg className="w-4 h-4 text-[#002aba] animate-[bounce_2s_infinite_0.15s] opacity-60"
+          fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+
+        <svg className="w-4 h-4 text-[#002aba] animate-[bounce_2s_infinite_0.3s] opacity-40"
+          fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+
+
+      </div>
+
     </section>
   );
 };
