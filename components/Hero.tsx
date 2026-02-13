@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
 
       {/* 컨텐츠 영역 */}
       <div className="relative z-10 w-full">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="w-full max-w-[1440px] mx-auto px-6 md:pl-20 lg:pl-32">
           <div className="text-left">
             {/* 왼쪽 절반 */}
             <div className="text-left max-w-[900px]">
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
                   </span>
                 </h2>
                 <p className="mt-4 text-base md:text-lg text-slate-70 tracking-wide">
-                  법원감정 · 하자진단 · VE · 건설클레임
+                  법원감정 · 하자진단 · VE · 건설크레임
                 </p>
 
 

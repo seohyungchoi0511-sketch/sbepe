@@ -12,7 +12,7 @@ const SERVICES = [
   },
   {
     id: "MOD-02",
-    title: "공기 및 공사비 검토",
+    title: "공기 및 원가계산 검토",
     description: "지연의 진짜 원인이 누구에게 있는지, 설계 변경에 따른 추가 비용은 적정한지 '데이터'로 산정하여 분쟁의 기준점을 제시합니다.",
     meta: "COST_PRECISION",
     tags: ["CPM", "Budget"],
@@ -28,7 +28,7 @@ const SERVICES = [
   },
   {
     id: "MOD-04",
-    title: "저온저장고 설비 기술분석",
+    title: "열병합발전소/급저온 기술분석",
     description: "냉각 시스템의 미세한 성능 편차까지 정밀 계측·검증하여 설계 기준, 시공 상태, 운전 조건을 종합 분석합니다.",
     meta: "GEO_SAFETY",
     tags: ["Geotechnical", "Risk"],
@@ -36,8 +36,8 @@ const SERVICES = [
   },
   {
     id: "MOD-05",
-    title: "소송 전 협상 지원",
-    description: "소송의 장기화와 막대한 비용을 피하기 위해, 상대방의 기술적 오류를 날카롭게 지적하는 근거 자료로 조기 종결을 유도합니다.",
+    title: "가치·자산 이전 감정",
+    description: "잔존가치 평가 및 건물 가치 증가 여부를 검토하고, 생산설비 이전에 따른 자산 변동을 객관적으로 분석합니다.",
     meta: "STRATEGIC_PREB",
     tags: ["Settlement", "Legal"],
     spec: "WIN_LOGIC_SYNC"
@@ -99,22 +99,10 @@ const Services: React.FC = () => {
               </div>
 
               {/* Module Content */}
-              <p className="mt-3 text-sm text-slate-600 leading-6 line-clamp-2">
-                {service.description}
-              </p>
-
-              {/* Tags & Meta */}
-              <div className="flex flex-wrap items-center gap-4 pt-8 border-t border-slate-50">
-                <div className="flex flex-wrap gap-2 flex-grow">
-                  {service.tags.map((tag, i) => (
-                    <span key={i} className="text-[9px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-2 py-1 group-hover:text-[#002aba]600 transition-colors">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <span className="text-[10px] font-mono font-bold text-slate-200 group-hover:text-[#002aba]100 transition-colors">
-                  {service.meta}
-                </span>
+              <div className="relative mt-3 flex-grow">
+                <p className="text-sm text-slate-600 leading-6">
+                  {service.description}
+                </p>
               </div>
 
               {/* Hover Interaction: Technical Scan Line */}
@@ -130,13 +118,13 @@ const Services: React.FC = () => {
         {/* Section Footer */}
         <div className="mt-20 flex flex-col md:flex-row items-center justify-between gap-8 opacity-30">
           <div className="flex gap-1">
-            {[...Array(12)].map((_, i) => (
+            {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="w-1 h-4 bg-slate-300" />
             ))}
           </div>
-          <span className="text-[9px] font-black uppercase tracking-[1em]">Forensic Protocol Synchronized 2025</span>
+
           <div className="flex gap-1">
-            {[...Array(12)].map((_, i) => (
+            {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="w-1 h-4 bg-slate-300" />
             ))}
           </div>

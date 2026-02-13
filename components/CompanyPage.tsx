@@ -41,21 +41,21 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
 
         {/* Compact Certificates (Changed to Sharp Rectangle) */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-40">
-          <div className="group relative w-48 md:w-56 aspect-[3/4] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden transform -rotate-2 hover:rotate-0 transition-all duration-500">
+          <div className="group relative w-64 md:w-80 aspect-[210/297] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
             <img
-              src="/images/certificates/SBEPE1.jpg"
+              src="/images/certificates/Gaesuldung.PNG"
               alt="Registration Certificate"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain p-2"
             />
-            <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/10 transition-colors duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/5 transition-colors duration-300 pointer-events-none" />
           </div>
-          <div className="group relative w-auto max-w-xs bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden transform rotate-2 hover:rotate-0 transition-all duration-500">
+          <div className="group relative w-64 md:w-80 aspect-[210/297] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
             <img
-              src="/images/certificates/SBEPE2.jpg"
+              src="/images/certificates/Saopjadung.PNG"
               alt="National Agency License"
-              className="block w-full h-auto max-h-[400px] object-contain"
+              className="w-full h-full object-contain p-2"
             />
-            <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/10 transition-colors duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/5 transition-colors duration-300 pointer-events-none" />
           </div>
         </div>
 
@@ -71,7 +71,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
             </div>
             <div className="md:col-span-8 p-10 bg-slate-50 border border-slate-100 rounded-none">
               <p className="text-lg text-slate-700 leading-relaxed break-keep">
-                <span className="font-bold text-slate-900">(주)서울건축환경기술사사무소</span>는 2002년 6월 기술사법 제6조 1항에 의하여 건설분야 기술사사무소로 설립되었습니다. 서울고등법원, 서울중앙지방법원, 서울남부지방법원의 건설 감정업무를 수행하며 대한민국 건설 공학의 신뢰를 쌓아왔으며, 2023년 전문성을 더욱 강화하기 위해 별내역 파라곤스퀘어로 이전하며 새로운 도약을 시작했습니다.
+                <span className="font-bold text-slate-900">(주)서울건축환경기술사사무소</span>는 2002년 6월 기술사법 제6조 1항에 의하여 건설분야 기술사사무소로 설립되었습니다. 서울고등법원, 서울중앙지방법원, 서울남부지방법원의 건설 감정업무를 수행하며 대한민국 건설 공학의 신뢰를 쌓아왔으며, 2021년 전문성을 더욱 강화하기 위해 별내역 파라곤스퀘어로 이전하며 새로운 도약을 시작했습니다.
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
                 건설감정의 선두주자로서 당사는 법원감정, 건설사업관리, VE 등 고도의 전문성이 요구되는 분야에 역량을 집중하고 있습니다. 창립 10주년을 넘어 이제는 <span className="text-blue-600 font-bold">글로벌 종합 엔지니어링 그룹</span>으로 도약하기 위해 공학적 진실과 기술적 정의를 실현해 나가고 있습니다.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {['법원감정', '건설크레임', '하자진단 및 조사', '건설사업관리', '가치관리(VE)'].map((item, idx) => (
+                {['법원감정', '원가계산', '건설크레임', '자진단 및 조사', '건설사업관리', '가치관리(VE)'].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-1 h-1 rounded-none bg-blue-600" />
                     <span className="text-sm font-bold text-slate-600">{item}</span>
@@ -124,11 +124,6 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
                 유병호 대표기술사는 소비자분쟁조정위원회 위원, 건설개혁시민연대 상임대표 등을 역임하며 <span className="text-blue-600 font-bold">'사회 참여형 기술사'</span>로서의 행보를 이어가고 있습니다. 소비자 주권운동과 부실공사 방지 시민운동을 통해 공학적 전문성이 사회적 정의로 발현될 수 있도록 헌신하고 있습니다.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['법원행정처 전문심리위원', '남양주시 평생학습실무위원', '부실공사방지 운동'].map((tag, i) => (
-                  <span key={i} className="px-3 py-1 bg-slate-50 rounded-none text-[10px] font-bold text-slate-500 border border-slate-100">
-                    {tag}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
