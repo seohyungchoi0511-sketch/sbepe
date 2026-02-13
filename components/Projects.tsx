@@ -8,19 +8,19 @@ interface ProjectsProps {
 const PROJECT_REPORTS = [
   {
     title: "용산 센트럴파크",
-    image: "public/images/picts/centralparkys.jpg",
+    image: "/images/picts/centralparkys.jpg",
   },
   {
     title: "롯데캐슬 광명",
-    image: "public/images/picts/lottecastlekm.jpg",
+    image: "/images/picts/lottecastlekm.jpg",
   },
   {
     title: "유엔빌리지 고급빌라",
-    image: "public/images/picts/unvillagesangwal.jpg",
+    image: "/images/picts/unvillagesangwal.jpg",
   },
   {
     title: "영통 2차 e-편한세상",
-    image: "public/images/picts/eapt.jpg",
+    image: "/images/picts/eapt.jpg",
   }
 ];
 
