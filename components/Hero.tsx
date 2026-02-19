@@ -6,29 +6,29 @@ const Hero: React.FC = () => {
       {/* 배경 */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/picts/map.png')" }}
+        style={{ backgroundImage: `url(/images/picts/seoul.jpg)` }}
       />
       <div className="absolute inset-0 bg-white/35" />
 
       {/* 컨텐츠 영역 */}
       <div className="relative z-10 w-full">
-        <div className="w-full max-w-[1440px] mx-auto px-6 md:pl-20 lg:pl-32">
+        <div className="mx-auto max-w-6xl px-6">
           <div className="text-left">
             {/* 왼쪽 절반 */}
             <div className="text-left max-w-[900px]">
               <div className="flex flex-col gap-3">
-                <h2 className="text-2xl md:text-4xl lg:text-5xl tracking-[-0.02em] leading-[1.15] font-normal">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl tracking-[-0.02em] leading-[1.15] font-normal font-seif-kr">
                   사회적 가치를 추구하는 열린 세상
                 </h2>
 
-                <h2 className="text-2xl md:text-4xl lg:text-5xl tracking-tight leading-[1.10] font-normal">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl tracking-tight leading-[1.10] font-normal font-serif-kr">
                   건설감정법인{" "}
                   <span className="font-semibold text-[#002aba]">
                     서울건축환경
                   </span>
                 </h2>
                 <p className="mt-4 text-base md:text-lg text-slate-70 tracking-wide">
-                  법원감정 · 하자진단 · VE · 건설크레임
+                  법원감정 · 하자진단 · VE · 건설클레임
                 </p>
 
 
