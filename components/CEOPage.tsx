@@ -11,8 +11,8 @@ const AWARDS: AwardItem[] = [
 ];
 
 const CERTIFICATIONS = [
-  { name: "건설사업관리사", agency: "한국CM협회", code: "Professional" },
   { name: "건축시공기술사", agency: "한국산업인력공단", code: "Professional" },
+  { name: "건설사업관리사", agency: "한국CM협회", code: "Professional" },
   { name: "건축기계설비기술사", agency: "한국산업인력공단", code: "Professional" },
   { name: "공조냉동기계기술사", agency: "한국산업인력공단", code: "Professional" },
 ];
@@ -92,13 +92,13 @@ const CEOPage: React.FC = () => {
             <div className="flex items-start justify-between gap-10">
               <div className="mb-0 pt-64 transition-all duration-700">
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tighter leading-none">
-                  대표이사 <span className="text-blue-600">유병호</span>
+                  대표이사 <span className="text-[#002aba]">유병호</span>
                 </h2>
-                <div className="h-1.5 w-14 bg-blue-600 rounded-none mt-6 shadow-sm shadow-blue-500/20" />
+                <div className="h-1.5 w-14 bg-[#002aba] rounded-none mt-6 shadow-sm shadow-[#002aba]/20" />
               </div>
 
               {/* 사진 컨테이너: rounded-none */}
-              <div className="w-full max-w-[220px] aspect-[3/4] rounded-none overflow-hidden bg-white border border-slate-200 shadow-2xl shadow-blue-500/10 shrink-0 relative group mt-40">
+              <div className="w-full max-w-[220px] aspect-[3/4] rounded-none overflow-hidden bg-white border border-slate-200 shadow-2xl shadow-[#002aba]/10 shrink-0 relative group mt-40">
                 <img
                   src="https://www.nyjnews.net/imgdata/nyjnews_net/201202/2012020504287552.jpg"
                   alt="대표기술사 유병호"
@@ -110,16 +110,18 @@ const CEOPage: React.FC = () => {
 
             <div className="space-y-10 pt-4">
               <h3 className="text-3xl font-bold text-slate-900 flex items-center gap-3">
-                <span className="w-10 h-10 rounded-none bg-blue-600 flex items-center justify-center text-white text-sm font-semibold shadow-lg shadow-blue-500/20">Q</span>
+                <span className="w-10 h-10 rounded-none bg-[#002aba] flex items-center justify-center text-white text-sm font-semibold shadow-lg shadow-[#002aba]/20">Q</span>
                 Greetings
               </h3>
 
               <div className="space-y-8 text-base md:text-lg text-slate-600 leading-relaxed text-justify">
-                <div className="text-slate-900 font-semibold text-2xl leading-[1.6] border-l-4 border-blue-600 pl-6 mb-10 py-1 tracking-tight">
+                <div className="text-slate-900 font-semibold text-2xl leading-[1.6] border-l-4 border-
+                
+                600 pl-6 mb-10 py-1 tracking-tight">
                   <p className="mb-2 text-slate-500 text-lg font-medium">안녕하십니까?</p>
                   <p>
                     공정하고 합리적인 건설 문화 창출을 위해 노력하는<br />
-                    <span className="text-blue-600">(주)서울건축환경기술사사무소</span> 대표이사 유병호입니다.
+                    <span className="text-[#002aba]">(주)서울건축환경기술사사무소</span> 대표이사 유병호입니다.
                   </p>
                 </div>
 
@@ -155,21 +157,21 @@ const CEOPage: React.FC = () => {
             {/* Qualification Section: rounded-none */}
             <div className="relative group">
               <div className="relative bg-white border border-slate-200 rounded-none p-8 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-                <div className="absolute top-0 right-0 p-4 opacity-[0.03] text-blue-600">
+                <div className="absolute top-0 right-0 p-4 opacity-[0.03] text-600">
                   <svg className="w-32 h-32 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                 </div>
 
                 <div className="flex items-center justify-between mb-8">
                   <h4 className="text-lg font-black text-slate-900 tracking-tight flex items-center gap-3">
-                    <span className="w-1.5 h-5 bg-blue-600 rounded-none" />
+                    <span className="w-1.5 h-5 bg-[#002aba] rounded-none" />
                     보유 자격 및 면허
                   </h4>
                 </div>
 
                 <div className="grid grid-cols-1 gap-3">
                   {CERTIFICATIONS.map((cert, idx) => (
-                    <div key={idx} className="flex items-center gap-4 p-4 rounded-none bg-slate-50 border border-slate-100/50 hover:bg-white hover:border-blue-200 hover:shadow-md transition-all group/item">
-                      <div className="w-9 h-9 rounded-none bg-white border border-slate-100 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                    <div key={idx} className="flex items-center gap-4 p-4 rounded-none bg-slate-50 border border-slate-100/50 hover:bg-white hover:border-[#002aba] hover:shadow-md transition-all group/item">
+                      <div className="w-9 h-9 rounded-none bg-white border border-slate-100 flex items-center justify-center text-[#002aba] group-hover/item:bg-[#002aba] group-hover/item:text-white transition-colors">
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
@@ -189,7 +191,8 @@ const CEOPage: React.FC = () => {
               <div className="relative bg-white border border-slate-200 rounded-none p-8 shadow-sm hover:shadow-xl transition-all duration-500">
                 <div className="flex items-center justify-between mb-8">
                   <h4 className="text-lg font-black text-slate-900 tracking-tight flex items-center gap-3">
-                    <span className="w-1.5 h-5 bg-orange-500 rounded-none" />
+                    <span className="w-1.5 h-5 bg-
+                    orange-500 rounded-none" />
                     주요 수상 내역
                   </h4>
                 </div>

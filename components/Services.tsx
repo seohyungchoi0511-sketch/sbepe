@@ -20,7 +20,7 @@ const SERVICES = [
   },
   {
     id: "MOD-03",
-    title: "현장 기술검토·의견조정",
+    title: "현장 기술분쟁·의견조정",
     description: "기술적 견해 차이로 멈춰선 현장에서 설계와 시공의 불일치를 판별하고, 이해관계자 모두가 납득할 수 있는 공학적 합의안을 도출합니다.",
     meta: "TECH_MEDIATION",
     tags: ["Compliance", "Site"],

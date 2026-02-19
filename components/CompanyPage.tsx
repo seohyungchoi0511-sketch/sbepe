@@ -107,7 +107,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
                 건설감정의 선두주자로서 당사는 법원감정, 건설사업관리, VE 등 고도의 전문성이 요구되는 분야에 역량을 집중하고 있습니다. 창립 10주년을 넘어 이제는 <span className="text-[#002aba]600 font-bold">글로벌 종합 엔지니어링 그룹</span>으로 도약하기 위해 공학적 진실과 기술적 정의를 실현해 나가고 있습니다.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {['건설기술정책연구', '소비자분쟁조정', '하자진단 및 조사', '건설·특수감정', '건설크레임', '원가계산'].map((item, idx) => (
+                {['건설기술정책연구', '소비자분쟁조정', '하자·공사대금/유익비판단', '건설·특수감정', '업무교육', '원가계산/기술지원'].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-1 h-1 rounded-none bg-[#002aba]600" />
                     <span className="text-sm font-bold text-slate-600">{item}</span>
