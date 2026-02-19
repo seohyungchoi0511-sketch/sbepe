@@ -1,5 +1,8 @@
 
-import React from 'react';
+import React from "react";
+
+const BASE = import.meta.env.BASE_URL;
+const logoSrc = `${BASE}images/logo/logo.png`;
 
 interface FooterProps {
   onNavigate: (view: 'home' | 'company' | 'ceo' | 'projects' | 'news') => void;
@@ -17,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               className="group flex flex-col items-center gap-4 outline-none hover:opacity-80 transition-opacity"
             >
               <img
-                src="/images/logo/logo.png"
+                src={logoSrc}
                 alt="(주)서울건축환경기술사사무소"
                 className="h-16 w-auto object-contain"
               />

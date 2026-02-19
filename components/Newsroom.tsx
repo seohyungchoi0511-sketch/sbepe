@@ -1,6 +1,9 @@
 
 import React from 'react';
 
+const BASE = import.meta.env.BASE_URL;
+const paragon = `${BASE}images/picts/paragon.png`;
+
 interface NewsroomProps {
   onNavigate: (view: 'home' | 'ceo' | 'projects' | 'news') => void;
 }
@@ -55,7 +58,7 @@ const Newsroom: React.FC<NewsroomProps> = ({ onNavigate }) => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/images/picts/paragon.png')`
+            backgroundImage: `url(${paragon})`
           }}
         />
         <div className="absolute inset-0 bg-white/20" />
@@ -66,8 +69,8 @@ const Newsroom: React.FC<NewsroomProps> = ({ onNavigate }) => {
         <div className="mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-4">
-              <span className="w-12 h-1.5 bg-blue-600 rounded-none" />
-              <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.4em]">Resources & Info</span>
+              <span className="w-12 h-1.5 bg-[#002aba]600 rounded-none" />
+              <span className="text-[#002aba]600 font-bold text-xs uppercase tracking-[0.4em]">Resources & Info</span>
             </div>
             <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight whitespace-nowrap">지식 정보 아카이브</h3>
           </div>

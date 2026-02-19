@@ -1,6 +1,12 @@
 
 import React from 'react';
 
+const BASE = import.meta.env.BASE_URL;
+const yongsancentral = `${BASE}images/picts/centralparkys.jpg`;
+const lottecastlekm = `${BASE}images/picts/lottecastlekm.jpg`;
+const unvillagesangwal = `${BASE}images/picts/unvillagesangwal.jpg`;
+const eapt = `${BASE}images/picts/eapt.jpg`;
+
 interface ProjectsProps {
   onNavigate?: (view: 'home' | 'ceo' | 'projects' | 'news') => void;
 }
@@ -8,19 +14,19 @@ interface ProjectsProps {
 const PROJECT_REPORTS = [
   {
     title: "용산 센트럴파크",
-    image: "/images/picts/centralparkys.jpg",
+    image: yongsancentral,
   },
   {
     title: "롯데캐슬 광명",
-    image: "/images/picts/lottecastlekm.jpg",
+    image: lottecastlekm,
   },
   {
     title: "유엔빌리지 고급빌라",
-    image: "/images/picts/unvillagesangwal.jpg",
+    image: unvillagesangwal,
   },
   {
     title: "영통 2차 e-편한세상",
-    image: "/images/picts/eapt.jpg",
+    image: eapt,
   }
 ];
 
@@ -32,8 +38,8 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
         {/* Header Section */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-1.5 bg-blue-600 rounded-none" />
-            <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.4em]">Track Record</span>
+            <div className="w-12 h-1.5 bg-[#002aba]600 rounded-none" />
+            <span className="text-[#002aba]600 font-bold text-xs uppercase tracking-[0.4em]">Track Record</span>
           </div>
           <h2 className="text-5xl font-black tracking-tighter text-slate-900">
             실적 보고 & 수행 사례
@@ -56,7 +62,7 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </div>
 
               <div className="py-8 px-4 text-center">
-                <h3 className="text-lg font-bold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 tracking-tight group-hover:text-[#002aba]600 transition-colors">
                   {project.title}
                 </h3>
               </div>
@@ -76,7 +82,7 @@ const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
 
           <button
             onClick={() => onNavigate?.('projects')}
-            className="flex items-center gap-3 px-14 py-6 bg-[#0f172a] text-white rounded-none font-black text-sm uppercase tracking-widest hover:bg-blue-600 transition-all shadow-xl shadow-slate-900/20 active:scale-95"
+            className="flex items-center gap-3 px-14 py-6 bg-[#0f172a] text-white rounded-none font-black text-sm uppercase tracking-widest hover:bg-[#002aba]600 transition-all shadow-xl shadow-slate-900/20 active:scale-95"
           >
             전체 수행 실적 더보기
             <span className="text-lg font-normal">→</span>
