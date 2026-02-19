@@ -1,6 +1,11 @@
 
 import React from 'react';
 
+const BASE = import.meta.env.BASE_URL;
+
+const gaesuldung = `${BASE}images/certificates/gaesuldung.png`;
+const saopjadung = `${BASE}images/certificates/saopjadung.png`;
+
 interface CompanyPageProps {
   onNavigate: (view: 'home' | 'company' | 'ceo' | 'projects' | 'news') => void;
 }
@@ -43,7 +48,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-40">
           <div className="group relative w-64 aspect-[3/4] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden transition-all duration-500">
             <img
-              src="/images/certificates/Gaesuldung.PNG"
+              src={gaesuldung}
               alt="Registration Certificate"
               className="w-full h-full object-contain"
             />
@@ -51,7 +56,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
           </div>
           <div className="group relative w-64 aspect-[3/4] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden transition-all duration-500">
             <img
-              src="/images/certificates/Saopjadung.PNG"
+              src={saopjadung}
               alt="National Agency License"
               className="w-full h-full object-contain"
             />
