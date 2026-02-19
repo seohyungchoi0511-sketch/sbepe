@@ -1,25 +1,29 @@
 import React from 'react';
 
+const BASE = import.meta.env.BASE_URL;
+const map = `${BASE}images/picts/map.PNG`;
+
 const ProjectListView: React.FC = () => {
   const REGIONAL_STATS = [
-    { region: "수도권/강원권", id: "region-seoul", count: "230+", color: "bg-blue-600" },
-    { region: "경상권", id: "region-gyeongsang", count: "30+", color: "bg-blue-400" },
-    { region: "전라권/충청권", id: "region-jeolla", count: "70+", color: "bg-slate-500" },
-    { region: "제주권", id: "region-jeju", count: "1+", color: "bg-slate-400" },
+    { region: "수도권/강원권", id: "region-seoul", count: "230+", color: "bg-[#002aba]" },
+    { region: "경상권", id: "region-gyeongsang", count: "30+", color: "bg-[#002aba]" }, // 예: 좀 밝게
+    { region: "전라권/충청권", id: "region-jeolla", count: "70+", color: "bg-[#002aba]" },
+    { region: "제주권", id: "region-jeju", count: "1+", color: "bg-[#002aba]" },
   ];
 
   const MAP_MARKERS = [
-    { id: "region-seoul", label: "수도권/강원", top: "42.5%", left: "49%", color: "bg-blue-600 shadow-blue-600/50" },
-    { id: "region-gyeongsang", label: "경상권", top: "60%", left: "57%", color: "bg-blue-400 shadow-blue-400/50" },
-    { id: "region-jeolla", label: "전라/충청", top: "62%", left: "46%", color: "bg-slate-500 shadow-slate-500/50" },
-    { id: "region-jeju", label: "제주권", top: "92%", left: "40%", color: "bg-slate-400 shadow-slate-400/50" },
+    { id: "region-seoul", label: "수도권/강원", top: "42.5%", left: "49%", color: "bg-[#002aba] shadow-[0_0_20px_rgba(0,42,186,0.5)]" },
+    { id: "region-gyeongsang", label: "경상권", top: "60%", left: "57%", color: "bg-[#002aba] shadow-[0_0_20px_rgba(0,42,186,0.5)]" },
+    { id: "region-jeolla", label: "전라/충청", top: "62%", left: "46%", color: "bg-[#002aba] shadow-[0_0_20px_rgba(0,42,186,0.5)]" },
+    { id: "region-jeju", label: "제주권", top: "92%", left: "40%", color: "bg-[#002aba] shadow-[0_0_20px_rgba(0,42,186,0.5)]" },
   ];
+
 
   const GROUPED_PROJECTS = [
     {
       id: "region-seoul",
       region: "수도권/강원권",
-      color: "border-blue-600",
+      color: "border-[#002aba]600",
       projects: [
         { year: "2025", title: "수원지방법원 안산지원 공사비" },
         { year: "2025", title: "서울서부지방법원 공사대금건" },
@@ -263,7 +267,7 @@ const ProjectListView: React.FC = () => {
     {
       id: "region-gyeongsang",
       region: "경상권",
-      color: "border-blue-400",
+      color: "border-[#002aba]400",
       projects: [
         { year: "2025", title: "대구고등법원 손해배상건" },
         { year: "2024", title: "대구지방법원 손해배상건" },
@@ -420,12 +424,12 @@ const ProjectListView: React.FC = () => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-8 h-1 bg-blue-600 rounded-none" />
-              <span className="text-blue-600 font-black text-[10px] uppercase tracking-widest">Global Track Record</span>
-              <span className="w-8 h-1 bg-blue-600 rounded-none" />
+              <span className="w-8 h-1 bg-[#002aba]600 rounded-none" />
+              <span className="text-[#002aba]600 font-black text-[10px] uppercase tracking-widest">Global Track Record</span>
+              <span className="w-8 h-1 bg-[#002aba]600 rounded-none" />
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter mb-4">
-              전국 규모의 <span className="text-blue-600">신뢰와 실적</span>
+              전국 규모의 <span className="text-[#002aba]600">신뢰와 실적</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto text-sm md:text-base break-keep">
               전국의 주요 거점에서 법원감정 및 건설기술 검토를 수행하며 공정하고 정밀한 공학적 솔루션을 제공합니다.
@@ -438,7 +442,7 @@ const ProjectListView: React.FC = () => {
             <div className="relative flex items-center justify-center py-6 min-h-[600px]">
               <div className="relative w-full max-w-xl transition-all duration-1000">
                 <img
-                  src="public/images/picts/map.PNG"
+                  src={map}
                   className="w-full h-auto opacity-100 contrast-[1.05] brightness-[1.05]"
                   alt="전국 수행 실적 지도"
                   onError={(e) => {
@@ -469,7 +473,7 @@ const ProjectListView: React.FC = () => {
             {/* Right: Stats Section */}
             <div className="flex flex-col justify-center space-y-6">
               <h3 className="text-xl font-black text-slate-900 tracking-tight flex items-center gap-3">
-                <span className="w-1.5 h-5 bg-blue-600 rounded-none" />
+                <span className="w-1.5 h-5 bg-[#002aba]600 rounded-none" />
                 권역별 수행 분포
               </h3>
 
@@ -478,13 +482,13 @@ const ProjectListView: React.FC = () => {
                   <button
                     key={stat.id}
                     onClick={() => scrollToSection(stat.id)}
-                    className="p-6 rounded-none bg-white border border-slate-100 hover:border-blue-600/30 hover:shadow-[0_15px_40px_-12px_rgba(59,130,246,0.1)] transition-all duration-500 group text-left outline-none active:scale-[0.98] relative overflow-hidden"
+                    className="p-6 rounded-none bg-white border border-slate-100 hover:border-[#002aba]600/30 hover:shadow-[0_15px_40px_-12px_rgba(59,130,246,0.1)] transition-all duration-500 group text-left outline-none active:scale-[0.98] relative overflow-hidden"
                   >
                     <div className={`w-8 h-1 ${stat.color} rounded-none mb-4 group-hover:w-12 transition-all duration-700`} />
                     <p className="text-[10px] font-black text-slate-400 mb-0.5 uppercase tracking-widest">{stat.region}</p>
                     <div className="flex items-end justify-between">
-                      <p className="text-3xl font-black text-slate-900 group-hover:text-blue-600 transition-colors tracking-tighter">{stat.count}</p>
-                      <div className="w-8 h-8 rounded-none bg-slate-50 flex items-center justify-center text-slate-300 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                      <p className="text-3xl font-black text-slate-900 group-hover:text-[#002aba]600 transition-colors tracking-tighter">{stat.count}</p>
+                      <div className="w-8 h-8 rounded-none bg-slate-50 flex items-center justify-center text-slate-300 group-hover:bg-[#002aba]600 group-hover:text-white transition-all duration-500">
                         <span className="text-sm font-bold">→</span>
                       </div>
                     </div>
@@ -535,7 +539,7 @@ const ProjectListView: React.FC = () => {
                       {group.projects.map((item, idx) => (
                         <tr key={`${group.id}-${idx}`} className="group hover:bg-slate-50/60 transition-all duration-300">
                           <td className="py-6 pl-10">
-                            <span className="text-sm font-black text-slate-400 group-hover:text-blue-600 transition-colors">{item.year}</span>
+                            <span className="text-sm font-black text-slate-400 group-hover:text-[#002aba]600 transition-colors">{item.year}</span>
                           </td>
                           <td className="py-6">
                             <p className="text-[16px] font-bold text-slate-800 group-hover:text-slate-950 group-hover:translate-x-1.5 transition-all duration-500 break-keep">{item.title}</p>
