@@ -62,10 +62,7 @@ const CEOSection: React.FC = () => {
                   <p className="text-xs text-white/40 uppercase tracking-widest font-bold">대표이사 / 공학석사 / 건축시공기술사</p>
                   <p className="text-2xl font-bold text-white italic">You Byeong-Ho (유 병 호)</p>
                 </div>
-                <div className="h-12 w-px bg-white/10 hidden sm:block" />
-                <div className="hidden sm:block">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Signature_of_John_Hancock.svg/1200px-Signature_of_John_Hancock.svg.png" alt="Signature" className="h-10 invert opacity-40 brightness-200" />
-                </div>
+
               </div>
             </div>
           </div>

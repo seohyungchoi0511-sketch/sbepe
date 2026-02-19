@@ -43,7 +43,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-40">
           <div className="group relative w-64 md:w-80 aspect-[210/297] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
             <img
-              src="/images/certificates/Gaesuldung.PNG"
+              src="/images/certificates/Gaesuldung.png"
               alt="Registration Certificate"
               className="w-full h-full object-contain p-2"
             />

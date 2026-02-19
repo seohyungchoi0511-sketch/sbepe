@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       {/* 배경 */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/picts/seoul.jpg')" }}
+        style={{ backgroundImage: "url('/images/picts/map.png')" }}
       />
       <div className="absolute inset-0 bg-white/35" />
 
