@@ -3,8 +3,8 @@ import React from "react";
 
 const BASE = import.meta.env.BASE_URL;
 
-const Gaesuldung = `${BASE}images/certificates/gaesuldung.png`;
-const Saopjadung = `${BASE}images/certificates/saopjadung.png`;
+const gaesuldung = `${BASE}images/certificates/gaesuldung.png`;
+const saopjadung = `${BASE}images/certificates/saopjadung.png`;
 
 interface CompanyPageProps {
   onNavigate: (view: 'home' | 'company' | 'ceo' | 'projects' | 'news') => void;
@@ -48,7 +48,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-40">
           <div className="group relative w-64 aspect-[3/4] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden transition-all duration-500">
             <img
-              src={Gaesuldung}
+              src={gaesuldung}
               alt="Registration Certificate"
               className="w-full h-full object-contain"
             />
@@ -56,7 +56,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
           </div>
           <div className="group relative w-64 aspect-[3/4] bg-white rounded-none shadow-lg border border-slate-200 overflow-hidden transition-all duration-500">
             <img
-              src={Saopjadung}
+              src={saopjadung}
               alt="National Agency License"
               className="w-full h-full object-contain"
             />
@@ -76,7 +76,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
             </div>
             <div className="md:col-span-8 p-10 bg-slate-50 border border-slate-100 rounded-none">
               <p className="text-lg text-slate-700 leading-relaxed break-keep">
-                <span className="font-bold text-slate-900">(주)서울건축환경기술사사무소</span>는 2002년 6월 기술사법 제6조 1항에 의하여 건설분야 기술사사무소로 설립되었습니다. 서울고등법원, 서울중앙지방법원, 서울남부지방법원의 건설 감정업무를 수행하며 대한민국 건설 공학의 신뢰를 쌓아왔으며, 2023년 전문성을 더욱 강화하기 위해 별내역 파라곤스퀘어로 이전하며 새로운 도약을 시작했습니다.
+                <span className="font-bold text-slate-900">(주)서울건축환경기술사사무소</span>는 2002년 6월 기술사법 제6조 1항에 의하여 건설분야 기술사사무소로 설립되었습니다. 서울고등법원, 서울중앙지방법원, 서울남부지방법원의 건설 감정업무를 수행하며 대한민국 건설 공학의 신뢰를 쌓아왔으며, 2021년 전문성을 더욱 강화하기 위해 별내역 파라곤스퀘어로 이전하며 새로운 도약을 시작했습니다.
               </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ onNavigate }) => {
                 건설감정의 선두주자로서 당사는 법원감정, 건설사업관리, VE 등 고도의 전문성이 요구되는 분야에 역량을 집중하고 있습니다. 창립 10주년을 넘어 이제는 <span className="text-[#002aba]600 font-bold">글로벌 종합 엔지니어링 그룹</span>으로 도약하기 위해 공학적 진실과 기술적 정의를 실현해 나가고 있습니다.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {['법원감정', '건설크레임', '하자진단 및 조사', '건설사업관리', '가치관리(VE)'].map((item, idx) => (
+                {['건설기술정책연구', '소비자분쟁조정', '하자진단 및 조사', '건설·특수감정', '건설크레임', '원가계산'].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-1 h-1 rounded-none bg-[#002aba]600" />
                     <span className="text-sm font-bold text-slate-600">{item}</span>

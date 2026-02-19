@@ -4,8 +4,8 @@ import React from 'react';
 const SERVICES = [
   {
     id: "MOD-01",
-    title: "하도급 분쟁 조사",
-    description: "복잡하게 얽힌 계약 조건과 현장 실행 자료의 괴리를 공학적 관점에서 재구성하여 승소를 위한 실질적 논리를 구축합니다.",
+    title: "건설기술정책연구 / 소비자분쟁조정",
+    description: "건설 현장 분쟁 사례를 분석하고, 계약 내용과 시공 상태를 검토하여 쟁점을 정리합니다. 이를 바탕으로 합리적인 조정 기준과 실질적인 해결 방향을 제시합니다.",
     meta: "CONTRACT_LOGIC",
     tags: ["Evidence", "Audit"],
     spec: "ISO-9001 COMPLIANT"
@@ -13,7 +13,7 @@ const SERVICES = [
   {
     id: "MOD-02",
     title: "공기 및 원가계산 검토",
-    description: "지연의 진짜 원인이 누구에게 있는지, 설계 변경에 따른 추가 비용은 적정한지 '데이터'로 산정하여 분쟁의 기준점을 제시합니다.",
+    description: "공사 지연의 원인을 규명하고 설계 변경에 따른 추가 비용의 적정성을 데이터 기반으로 산정하여 분쟁의 기준점을 제시합니다.",
     meta: "COST_PRECISION",
     tags: ["CPM", "Budget"],
     spec: "DATA_VERIFIED"
@@ -28,19 +28,19 @@ const SERVICES = [
   },
   {
     id: "MOD-04",
-    title: "열병합발전소/급저온 기술분석",
-    description: "냉각 시스템의 미세한 성능 편차까지 정밀 계측·검증하여 설계 기준, 시공 상태, 운전 조건을 종합 분석합니다.",
-    meta: "GEO_SAFETY",
-    tags: ["Geotechnical", "Risk"],
-    spec: "REALTIME_MONITOR"
-  },
-  {
-    id: "MOD-05",
-    title: "가치·자산 이전 감정",
-    description: "잔존가치 평가 및 건물 가치 증가 여부를 검토하고, 생산설비 이전에 따른 자산 변동을 객관적으로 분석합니다.",
+    title: "하자·공사대금 / 유익비판단",
+    description: "하자 발생 여부와 공사대금의 적정성을 기술적으로 검토하고, 추가 공사의 필요성과 효과를 분석하여 유익비 해당 여부와 합리적인 비용 기준을 제시합니다.",
     meta: "STRATEGIC_PREB",
     tags: ["Settlement", "Legal"],
     spec: "WIN_LOGIC_SYNC"
+  },
+  {
+    id: "MOD-05",
+    title: "열병합발전소 / 극저온 기술분석",
+    description: "설비 운영 상태와 공정 조건을 기술적으로 검토하여 문제 원인을 분석하고, 시스템 특성을 반영한 합리적인 개선 방향과 판단 기준을 제시합니다.",
+    meta: "GEO_SAFETY",
+    tags: ["Geotechnical", "Risk"],
+    spec: "REALTIME_MONITOR"
   },
   {
     id: "MOD-06",
