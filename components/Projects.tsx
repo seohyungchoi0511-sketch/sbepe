@@ -4,7 +4,7 @@ import React from 'react';
 const BASE = import.meta.env.BASE_URL;
 const yongsancentral = `${BASE}images/picts/centralparkys.jpg`;
 const lottecastlekm = `${BASE}images/picts/lottecastlekm.jpg`;
-const unvillagesangwal = `${BASE}images/picts/unvillagesangwal.jpg`;
+const unvillagesangwal = `${BASE}images/picts/sangwalfinale.jpg`;
 const eapt = `${BASE}images/picts/eapt.jpg`;
 
 interface ProjectsProps {
