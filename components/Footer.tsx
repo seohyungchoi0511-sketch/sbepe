@@ -27,8 +27,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </button>
           </div>
 
-          {/* 정보 박스를 둥글둥글하게 변경 */}
-          <div className="w-full max-w-4xl bg-white border border-slate-200 rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+          <div className="w-full max-w-4xl bg-white border border-slate-200 rounded-none p-8 md:p-12 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
               <div className="space-y-4">
