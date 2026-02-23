@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${seoulBg})` }}  // import한 변수 바로 사용
       />
-      <div className="absolute inset-0 bg-white/35" />
+      <div className="absolute inset-0 bg-white/35 pointer-events-none" />
 
       {/* 컨텐츠 영역 */}
       <div className="relative z-10 w-full">
