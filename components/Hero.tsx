@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section className="relative w-full min-h-[100vh] flex items-center overflow-hidden">
       {/* 배경 */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center pointer-events-none"
         style={{ backgroundImage: `url(${seoulBg})` }}  // import한 변수 바로 사용
       />
       <div className="absolute inset-0 bg-white/35 pointer-events-none" />
