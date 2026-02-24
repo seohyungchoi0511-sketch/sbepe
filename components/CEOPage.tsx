@@ -72,7 +72,6 @@ const CEOPage: React.FC = () => {
   return (
     <div className="relative bg-white pt-32 pb-20 min-h-screen overflow-hidden">
 
-      {/* Exact Match Geometric Background */}
       <div className="absolute top-0 left-0 right-0 h-[600px] -z-10 pointer-events-none overflow-hidden bg-[#eff6ff]">
         <div className="absolute inset-0 bg-gradient-to-br from-[#f8faff] to-[#eef4ff]" />
         <svg className="absolute bottom-0 left-0 w-full h-full opacity-60" viewBox="0 0 1440 600" preserveAspectRatio="none">
@@ -87,7 +86,6 @@ const CEOPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-          {/* Left Side: Photo and Message */}
           <div className="lg:col-span-7 space-y-16 lg:-mt-20 pt-6">
             <div className="flex items-start justify-between gap-10">
               <div className="mb-0 pt-64 transition-all duration-700">
@@ -97,7 +95,6 @@ const CEOPage: React.FC = () => {
                 <div className="h-1.5 w-14 bg-[#002aba] rounded-none mt-6 shadow-sm shadow-[#002aba]/20" />
               </div>
 
-              {/* 사진 컨테이너: rounded-none */}
               <div className="w-full max-w-[220px] aspect-[3/4] rounded-none overflow-hidden bg-white border border-slate-200 shadow-2xl shadow-[#002aba]/10 shrink-0 relative group mt-40">
                 <img
                   src="https://www.nyjnews.net/imgdata/nyjnews_net/201202/2012020504287552.jpg"
@@ -151,10 +148,8 @@ const CEOPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Sidebar */}
           <div className="lg:col-span-5 space-y-6 pt-6">
 
-            {/* Qualification Section: rounded-none */}
             <div className="relative group">
               <div className="relative bg-white border border-slate-200 rounded-none p-8 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-[0.03] text-600">
@@ -186,13 +181,12 @@ const CEOPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Awards Section: 타임라인 포인트 적용 */}
             <div className="relative group">
               <div className="relative bg-white border border-slate-200 rounded-none p-8 shadow-sm hover:shadow-xl transition-all duration-500">
                 <div className="flex items-center justify-between mb-8">
                   <h4 className="text-lg font-black text-slate-900 tracking-tight flex items-center gap-3">
                     <span className="w-1.5 h-5 bg-
-                    orange-500 rounded-none" />
+                    blue-500 rounded-none" />
                     주요 수상 내역
                   </h4>
                 </div>
@@ -202,11 +196,11 @@ const CEOPage: React.FC = () => {
 
                   {AWARDS.map((award, idx) => (
                     <div key={idx} className="relative pl-8 group/award">
-                      <div className="absolute left-[9px] top-[7px] w-[5px] h-[5px] rounded-none bg-orange-400 group-hover/award:bg-orange-600 group-hover/award:scale-150 transition-all duration-300 ring-4 ring-white" />
+                      <div className="absolute left-[9px] top-[7px] w-[5px] h-[5px] rounded-none bg-blue-400 group-hover/award:bg-blue-600 group-hover/award:scale-150 transition-all duration-300 ring-4 ring-white" />
 
                       <div className="space-y-0.5">
-                        <span className="text-[9px] font-black text-orange-500 uppercase tracking-tighter">{award.year}</span>
-                        <h5 className="text-[13px] font-bold leading-tight text-slate-800 group-hover/award:text-orange-600 transition-colors">{award.title}</h5>
+                        <span className="text-[9px] font-black text-blue-500 uppercase tracking-tighter">{award.year}</span>
+                        <h5 className="text-[13px] font-bold leading-tight text-slate-800 group-hover/award:text-blue-600 transition-colors">{award.title}</h5>
                         <p className="text-[10px] text-slate-400 font-medium">{award.organization}</p>
                       </div>
                     </div>
@@ -215,7 +209,6 @@ const CEOPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Activities Section: 개별 아이콘 적용 */}
             <div className="relative group">
               <div className="relative bg-white border border-slate-200 rounded-none p-8 pb-10 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-50 rounded-none blur-3xl opacity-60 group-hover:bg-indigo-100 transition-colors" />

@@ -1441,7 +1441,7 @@ const NewsListView: React.FC = () => {
         <article className="max-w-4xl mx-auto px-6 pt-16 md:pt-24">
           <div className="space-y-10">
             <div className="space-y-6">
-              <span className={`px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest inline-block ${selectedArticle.tagColor}`}>
+              <span className={`px-4 py-1.5 rounded-none text-[10px] font-black uppercase tracking-widest inline-block ${selectedArticle.tagColor}`}>
                 {selectedArticle.category}
               </span>
               <h1 className="text-3xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tighter break-keep">
@@ -1501,7 +1501,7 @@ const NewsListView: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2.5 rounded-xl text-[11px] font-black transition-all border ${selectedCategory === cat
+              className={`px-6 py-2.5 rounded-none text-[11px] font-black transition-all border ${selectedCategory === cat
                 ? 'bg-slate-900 border-slate-900 text-white shadow-lg'
                 : 'bg-white border-slate-200 text-slate-400 hover:border-blue-600 hover:text-blue-600'
                 }`}
