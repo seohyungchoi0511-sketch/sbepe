@@ -6,7 +6,7 @@ const map = `${BASE}images/picts/map.PNG`;
 const ProjectListView: React.FC = () => {
   const REGIONAL_STATS = [
     { region: "수도권/강원권", id: "region-seoul", count: "230+", color: "bg-[#002aba]" },
-    { region: "경상권", id: "region-gyeongsang", count: "30+", color: "bg-[#002aba]" }, // 예: 좀 밝게
+    { region: "경상권", id: "region-gyeongsang", count: "30+", color: "bg-[#002aba]" },
     { region: "전라권/충청권", id: "region-jeolla", count: "70+", color: "bg-[#002aba]" },
     { region: "제주권", id: "region-jeju", count: "1+", color: "bg-[#002aba]" },
   ];
@@ -25,6 +25,7 @@ const ProjectListView: React.FC = () => {
       region: "수도권/강원권",
       color: "border-[#002aba]600",
       projects: [
+        { year: "2026", title: "서울중앙지방법원 공사대금건" },
         { year: "2025", title: "수원지방법원 안산지원 공사비" },
         { year: "2025", title: "서울서부지방법원 공사대금건" },
         { year: "2025", title: "서울중앙지방법원 채무부존재확인건" },
@@ -418,10 +419,8 @@ const ProjectListView: React.FC = () => {
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
       `}</style>
 
-      {/* Top Section: Sea-blue Background */}
-      <div className="bg-[#f0f9ff] pt-32 pb-24 border-b border-slate-100/50">
+      <div className="bg-white pt-32 pb-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Header Section */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="w-8 h-1 bg-[#002aba]600 rounded-none" />
@@ -429,31 +428,23 @@ const ProjectListView: React.FC = () => {
               <span className="w-8 h-1 bg-[#002aba]600 rounded-none" />
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter mb-4">
-              전국 규모의 <span className="text-[#002aba]600">신뢰와 실적</span>
+              주요 거점의 <span className="text-[#002aba]600">신뢰와 실적</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto text-sm md:text-base break-keep">
-              전국의 주요 거점에서 법원감정 및 건설기술 검토를 수행하며 공정하고 정밀한 공학적 솔루션을 제공합니다.
+              주요 프로젝트 수행 경험을 바탕으로 법원감정 및 건설기술 검토를 수행하며, 근거 중심의 기술 의견을 제공합니다.
             </p>
           </div>
-
-          {/* Map & Stats Dashboard */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left: Map Container */}
             <div className="relative flex items-center justify-center py-6 min-h-[600px]">
               <div className="relative w-full max-w-xl transition-all duration-1000">
                 <img
                   src={map}
                   className="w-full h-auto opacity-100 contrast-[1.05] brightness-[1.05]"
-                  alt="전국 수행 실적 지도"
+                  alt="수행 실적 지도"
                   onError={(e) => {
-                    // Fallback to avoid empty space
-                    e.currentTarget.style.display = 'none'; // If it fails, rely on background or just show markers?
-                    // Actually, let's keep the fallback but make sure it works. 
-                    // attempting to load original if path tweak worked
+                    e.currentTarget.style.display = 'none';
                   }}
                 />
-
-                {/* Interactive Markers */}
                 {MAP_MARKERS.map((marker, idx) => (
                   <button
                     key={`${marker.id}-${idx}`}
@@ -469,8 +460,6 @@ const ProjectListView: React.FC = () => {
                 ))}
               </div>
             </div>
-
-            {/* Right: Stats Section */}
             <div className="flex flex-col justify-center space-y-6">
               <h3 className="text-xl font-black text-slate-900 tracking-tight flex items-center gap-3">
                 <span className="w-1.5 h-5 bg-[#002aba]600 rounded-none" />
@@ -500,9 +489,7 @@ const ProjectListView: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Section: White Background */}
       <div className="max-w-7xl mx-auto px-6 py-32">
-        {/* Detailed Project List Section */}
         <div className="space-y-24">
           <div className="flex items-end justify-between border-b border-slate-100 pb-8">
             <div className="space-y-2">
@@ -524,8 +511,6 @@ const ProjectListView: React.FC = () => {
                   {group.projects.length - 1} Cases Archive
                 </span>
               </div>
-
-              {/* 프로젝트 리스트 컨테이너 */}
               <div className="relative rounded-none border border-slate-100 bg-white overflow-hidden shadow-xl shadow-slate-200/30 mx-auto">
                 <div className="max-h-[450px] overflow-y-auto custom-scrollbar">
                   <table className="w-full text-left border-collapse">
@@ -553,8 +538,6 @@ const ProjectListView: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Footer Accent */}
         <div className="mt-32 text-center relative">
           <div className="absolute top-1/2 left-0 right-0 h-px bg-slate-100 -z-10" />
           <p className="inline-block px-10 bg-white text-[9px] font-black text-slate-200 uppercase tracking-[0.6em]">
