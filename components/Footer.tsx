@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           <div className="mt-12 text-center">
             <p className="text-[10px] font-bold text-slate-300 uppercase tracking-[0.4em]">
-              © 2025 SEOUL FORENSIC ENGINEERING. ALL RIGHTS RESERVED.
+              © 2026 SBEPE. ALL RIGHTS RESERVED.
             </p>
           </div>
 
