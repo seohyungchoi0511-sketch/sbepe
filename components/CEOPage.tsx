@@ -2,6 +2,9 @@
 import React from 'react';
 import { AwardItem } from '../types';
 
+const BASE = import.meta.env.BASE_URL;
+const ceo = `${BASE}images/picts/profile.png`;
+
 const AWARDS: AwardItem[] = [
   { year: "2016", title: "경기도지사 유공 표창 수상", organization: "경기도청" },
   { year: "2015", title: "경인인물대상(봉사부분) 수상", organization: "경인일보" },
@@ -97,7 +100,7 @@ const CEOPage: React.FC = () => {
 
               <div className="w-full max-w-[220px] aspect-[3/4] rounded-none overflow-hidden bg-white border border-slate-200 shadow-2xl shadow-[#002aba]/10 shrink-0 relative group mt-40">
                 <img
-                  src="https://www.nyjnews.net/imgdata/nyjnews_net/201202/2012020504287552.jpg"
+                  src={ceo}
                   alt="대표기술사 유병호"
                   className="w-full h-full object-cover object-top"
                 />
@@ -190,6 +193,7 @@ const CEOPage: React.FC = () => {
                     주요 수상 내역
                   </h4>
                 </div>
+
 
                 <div className="relative space-y-7">
                   <div className="absolute left-[11px] top-2 bottom-2 w-px bg-slate-100" />
